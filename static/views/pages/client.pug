@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block prepend styles
+  link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+   div(class='breadcrumb')
+      li(id='pastitle')= title
+   form(id='client-add-form' name='client-add-form' class='form-inline' action='')
+      div(class='form-group')
+         div(class='col')
+            label(for='name') Name
+         div(class='col')
+            input(id='name' name='name' value='' class='form-control')
+      div(class='form-group')
+         div(class='col')
+            label(for='name') Budget
+         div(class='col')
+            input(id='budget' name='budget' value='' class='form-control')        
+      div(class='form-group')
+         div(class='col')
+            button(type='submit' class='btn btn-primary') Create
+      div.list-wrapper
+         table(id='client-list')
+block append scripts
+   script(src='/static/js/models/client.js')
+   script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+   script(src='/static/js/views/client.js')
+      

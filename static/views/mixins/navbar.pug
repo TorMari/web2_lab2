@@ -1,0 +1,21 @@
+//extends ../layout.pug
+
+block nav
+   nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href='#') Lab2
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+         span.navbar-toggler-icon
+  
+      .collapse.navbar-collapse(id='navbarSupportedContent')
+         ul.navbar-nav.mr-auto
+            li.nav-item.active
+               a.nav-link(href='/', id = 'nav-link') Home
+            li.nav-item
+               a.nav-link(href='/client', id = 'nav-link') Client
+            li.nav-item
+               a.nav-link(href='/project', id = 'nav-link') Project
+            li.nav-item
+               a.nav-link(href='/project_doer', id = 'nav-link') Project doer
+            li.nav-item
+               a.nav-link(href='/progress', id = 'nav-link') Project in progress
+            

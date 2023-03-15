@@ -1,0 +1,39 @@
+extends ../layout.pug
+
+block prepend styles
+  link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+   div(class='breadcrumb')
+      li(id='pastitle')= title
+   form(id='prog-add-form' name='prog-add-form' class='form-inline' action='')
+      div(class='form-group')
+         div(class='col')
+            label(for='name') Project
+         div(class='col')
+            input(id='project' name='project' value='' class='form-control')
+      div(class='form-group')
+         div(class='col')
+            label(for='name') Project doer
+         div(class='col')
+            input(id='doer' name='doer' class='form-control')   
+      div(class='form-group')
+         div(class='col')
+            label(for='name') Start date
+         div(class='col')
+            input(id='start' name='start' class='form-control')  
+      div(class='form-group')
+         div(class='col')
+            label(for='name') Finish date
+         div(class='col')
+            input(id='finish' name='finish' value='' class='form-control')       
+      div(class='form-group')
+         div(class='col')
+            button(type='submit' class='btn btn-primary') Create
+      div.list-wrapper
+         table(id='prog-list')
+block append scripts
+   script(src='/static/js/models/progress.js')
+   script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+   script(src='/static/js/views/progress.js')
+      
